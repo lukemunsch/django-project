@@ -11,7 +11,8 @@
 <body>
     <h1>Add a new item to list:</h1>
 
-    <form>
+    <form method="POST" action="add">
+        {% csrf_token %}
         <div>
             <p>
                 <label for="id_name">Name: </label>
