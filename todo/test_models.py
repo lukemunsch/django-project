@@ -7,3 +7,7 @@ class TestModels(TestCase):
     def test_done_default_is_false(self):
         item = Item.objects.create(name='Test todo item')
         self.assertFalse(item.done)
+
+    def test_item_string_method_returns_name(self):
+        item = Item.objects.create(name='Test Str method')
+        self.assertEqual(str(item), 'Test Str method')
